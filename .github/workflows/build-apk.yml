@@ -1,3 +1,4 @@
+
 name: Build Taxi Meter APK
 
 on:
@@ -18,6 +19,11 @@ jobs:
           distribution: temurin
           java-version: '17'
 
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+
       - name: Build APK
         run: gradle assembleDebug
 
@@ -26,3 +32,4 @@ jobs:
         with:
           name: taxi-meter-apk
           path: app/build/outputs/apk/debug/app-debug.apk
+          
