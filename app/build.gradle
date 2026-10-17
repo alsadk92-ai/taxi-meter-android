@@ -1,0 +1,16 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.alsadk92ai.taximeter'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.alsadk92ai.taximeter'
+        minSdk 23
+        targetSdk 28
+        versionCode 1
+        versionName '1.0'
+    }
+}
